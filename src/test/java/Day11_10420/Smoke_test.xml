@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Automation Suite">
+    <test name="Regression Test" preserve-order="true">
+        <classes>
+            <class name="Day11_10420.TestNG_google" />
+            <class name="Day11_10420.TestNG_MortgageCalc" />
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
