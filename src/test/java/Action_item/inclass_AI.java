@@ -47,7 +47,8 @@ public class inclass_AI extends Abstract_Class {
         Reusable_Methods_Loggers.click(driver, "//*[@class='fl-l mr-5 last']", "Clicking");
         Thread.sleep(2000);
 
-        List<WebElement> imageCount= driver.findElements(By.xpath("//*[@class='ld r0']"));
+        List<WebElement> imageCount= driver.findElements(By.xpath("//*[@data-bns='API']"));
+        //USING DATA BNS INSTEAD OF CLASS GIVES A BETTER COUNT.
         //print out the link count
         System.out.println(("Image Count is " + imageCount.size()));
         Thread.sleep(2000);
