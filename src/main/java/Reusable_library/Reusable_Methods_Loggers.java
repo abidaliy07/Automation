@@ -5,6 +5,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -12,6 +13,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.apache.commons.io.FileUtils;
 
 
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 
@@ -203,5 +207,41 @@ public class Reusable_Methods_Loggers {
             e.printStackTrace();
         }
     }//end of screenshot method
+    //public static void uploadFile(String filePath) throws AWTException {
+        //StringSelection ss = new StringSelection(filePath);
+        //Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss,null);
+        //Robot robot=new Robot();
+       // robot.delay(1000);
+        //This step clicks on 'Browse' button
+       // robot.keyPress(KeyEvent.VK_ENTER);
+        //This step clicks on 'File name' textbox
+        //robot.keyPress(KeyEvent.VK_ENTER);
+        //Next two steps does "Ctrl+V" and paste the filepath
+       // robot.keyPress(KeyEvent.VK_CONTROL);
+        //robot.keyPress(KeyEvent.VK_V);
+        //This step attached the file and clicks on 'Open'
+        //robot.keyPress(KeyEvent.VK_ENTER);
+        //robot.keyPress(KeyEvent.VK_ENTER);
+
+    //}//end of upload file using Robot command
+    public static void uploadFile(String string) throws AWTException {
+        StringSelection stringSelection = new StringSelection(string);
+        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+        //setClipboardData("C:\\path to file\\example.jpg");
+//native key strokes for CTRL, V and ENTER keys
+        Robot robot = new Robot();
+        robot.keyPress(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+
+    }
+
+
+
+
+
 
 }//end of java class

@@ -18,7 +18,7 @@ public class Abstract_Class_Cross_Browser {
     @BeforeSuite
     public void setPrecondition() throws IOException, InterruptedException {
         //set the report path here
-        reports = new ExtentReports("src/main/java/HTML_Report/AutomationReport.html",true);
+        reports = new ExtentReports("src/main/java/HTML_Report/AutomationReports.html",true);
     }//end of before suite
 
     //to be able to pick up the name of your test classes dynamically we need to use beforemethod
