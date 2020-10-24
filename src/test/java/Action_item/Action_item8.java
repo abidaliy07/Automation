@@ -26,7 +26,7 @@ public class Action_item8 extends Abstract_Class_Cross_Browser {
         Thread.sleep(2000);
 
         String actualTitle = driver.getTitle();
-        if (actualTitle == "Fedex Office Print Online") {
+        if (actualTitle.contains("Fedex Office Print Online")) {
             logger.log(LogStatus.PASS, "Error Matches");
         } else{
             logger.log(LogStatus.FAIL, "Error doesn't match");
