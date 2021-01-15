@@ -34,7 +34,7 @@ public class Reusable_Methods_Loggers {
          */
         Thread.sleep(1000);
         //set the chrome driver location
-        System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver87.exe");
         //setting the chrome options before defining the driver
         ChromeOptions options = new ChromeOptions();
         //set the driver to be maximized
@@ -83,6 +83,7 @@ public class Reusable_Methods_Loggers {
             System.out.println("Typing on element " + elementName);
             logger.log(LogStatus.INFO,"Typing on element " + elementName);
             WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator)));
+            Thread.sleep(4000);
             element.clear();
             element.sendKeys(userValue);
         }catch (Exception err){

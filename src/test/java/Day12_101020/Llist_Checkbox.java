@@ -22,7 +22,7 @@ public class Llist_Checkbox {
         System.out.println(("Link count is " + linkCount.size()));
 
         //click on sign in button
-        Reusable_Methods.click(driver, "//*[@class='_yb_687jt']", "Sign in button");
+        Reusable_Methods.click(driver, "//*[@class='_yb_pf5jl']", "Sign in button");
         Thread.sleep(2500);
         boolean checkboxState= driver.findElement(By.xpath("//*[@id='persistent']")).isSelected();
         //expecting the checkbox to be selected

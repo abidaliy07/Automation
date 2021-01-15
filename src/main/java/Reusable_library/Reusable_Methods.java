@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Reusable_Methods {
     public static WebDriver getDriver (){
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver87.exe");
 
         //setting the chrome options before defining the driver
         ChromeOptions options = new ChromeOptions();
